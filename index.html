@@ -7,6 +7,7 @@
 
     <!-- INCLUSÃO DAS BIBLIOTECAS NECESSÁRIAS -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.4.0/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
@@ -18,15 +19,15 @@
 
     <a-scene embedded arjs>
         <a-marker preset="hiro">
-            <a-text value="Um flamingo!" position="0 1 0" color="#ff0000" scale="1 1 1" rotation="0 90 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000"></a-text>
+            <a-text value="Flamingo" position="1 2 0" color="#ff0000" scale="1 1 1" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000"></a-text>
 
-            <a-entity gltf-model="#flamingo" scale="0.03 0.03 0.03" position="0 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#flamingo" animation-mixer scale="0.03 0.03 0.03" position="0 0.1 0.1" rotation="-90 0 0"></a-entity>
         </a-marker>
 
         <a-marker preset="kanji">
-            <a-text value="Gru" position="0 1 0" color="#ff0000" scale="1 1 1" rotation="0 90 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000"></a-text>
+            <a-text value="Gru" position="1 2 0" color="#ff0000" scale="1 1 1" rotation="0 90 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000"></a-text>
 
-            <a-entity gltf-model="#gru" scale="0.03 0.03 0.03" position="0 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#gru" animation-mixer scale="0.03 0.03 0.03" position="0 0.1 0.1"></a-entity>
         </a-marker>
 
         <a-entity camera></a-entity>
